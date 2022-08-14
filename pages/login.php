@@ -1,5 +1,10 @@
 <h1>Login Page</h1>
-<?php Message::get();
+<?php
+if (isset($_SESSION['user'])) {
+    header("location: index.php?page=profile");
+}
+
+Message::get();
 
 ?>
 <form action="index.php" method="POST">

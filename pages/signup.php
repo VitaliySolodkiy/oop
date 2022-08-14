@@ -1,5 +1,9 @@
 <h1>Sign Up</h1>
-<?php Message::get() ?>
+<?php
+if (isset($_SESSION['user'])) {
+    header("location: index.php?page=profile");
+}
+Message::get(); ?>
 <form action="index.php" method="POST">
     <div class="form-group">
         <label for="login" class="form-label">Login:</label>
