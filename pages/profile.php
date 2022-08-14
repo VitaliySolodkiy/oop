@@ -11,7 +11,7 @@ require_once "./elements/user.php";
     <div class="card p-4">
         <div class=" image d-flex flex-column justify-content-center align-items-center">
             <button class="btn btn-secondary">
-                <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
+                <img src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" height="100" width="100" />
             </button>
             <span class="name mt-3"><?= $user_login ?></span>
             <span class="idd"><?= $user_email ?></span>
