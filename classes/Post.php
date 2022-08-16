@@ -1,4 +1,7 @@
 <?php
+
+namespace Classes;
+
 abstract class Post // нельзя создать экземпляр абстрактного класса
 {
     private $title;

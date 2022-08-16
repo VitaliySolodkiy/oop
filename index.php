@@ -1,7 +1,26 @@
 <?php
 require_once "./functions/main.php";
-require_once "./classes/figures/Rectangle.php";
-require_once "./classes/figures/Square.php";
+
+// require_once './classes/Post.php';
+// require_once './classes/Lesson.php';
+// require_once './vendor/Lesson.php';
+
+// require_once "./classes/figures/Rectangle.php";
+// require_once "./classes/figures/Square.php";
+
+spl_autoload_register(function ($class) {
+    // echo $class;
+    require_once "./$class.php";
+    // if (file_exists("./classes/$class.php")) {
+    //     require_once "./classes/$class.php";
+    // } elseif (file_exists("./classes/figures/$class.php")) {
+    //     require_once "./classes/figures/$class.php";
+    // }
+
+});
+
+use Classes\Lesson; //по умолчанию берем класс из указанной папки
+
 ?>
 
 <!DOCTYPE html>
@@ -55,12 +74,12 @@ require_once "./classes/figures/Square.php";
         var_dump($figure_1 instanceof CalcSquare); //проверяем имплиментирует ли $figure_1 интерфейс CalcSquare */
 
         $figures = [
-            new Rectangle(5, 10),
-            new Square(5),
+            new Classes\Figures\Rectangle(5, 10),
+            new Classes\Figures\Square(5),
         ];
 
         foreach ($figures as $figure) {
-            if ($figure instanceof CalcSquare) {
+            if ($figure instanceof Classes\Figures\CalcSquare) {
                 echo 'Square: ' . $figure->calcSquare() . '<br>';
             }
         }

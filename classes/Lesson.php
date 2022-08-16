@@ -1,5 +1,8 @@
 <?php
-require_once "classes/Mark.php";
+
+namespace Classes;
+
+// require_once "classes/Mark.php";
 
 class Lesson extends Post
 {

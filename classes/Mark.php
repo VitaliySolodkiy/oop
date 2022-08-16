@@ -1,5 +1,7 @@
 <?php
 
+namespace Classes;
+
 trait Mark
 {
     private $mark = 0;

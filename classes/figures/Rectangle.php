@@ -1,5 +1,8 @@
 <?php
-require_once "classes/figures/CalcSquare.php";
+
+namespace Classes\Figures;
+
+// require_once "classes/figures/CalcSquare.php";
 class Rectangle implements CalcSquare
 {
     public $w;
