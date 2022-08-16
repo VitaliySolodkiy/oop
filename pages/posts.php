@@ -6,14 +6,19 @@ require_once './classes/Lesson.php';
 
 Post::$tagTitle = 'h3';
 
-$post1 = new Post('First post', 123);
+/* $post1 = new Post('First post', 123);
 
 echo $post1->getPost() . "<br>";
 
 echo $post1; //__toString()
 
-echo "<hr>";
+echo "<hr>"; */
 
 $lesson1 = new Lesson('First Lesson', 'lesson text', 'DZ text');
-echo $lesson1->getPost();
+echo $lesson1->getPost() . "<br>";
+
+echo $lesson1->setMark(1);
+
+echo $lesson1->getMark();
+
 ?>

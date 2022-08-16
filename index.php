@@ -1,5 +1,7 @@
 <?php
 require_once "./functions/main.php";
+require_once "./classes/figures/Rectangle.php";
+require_once "./classes/figures/Square.php";
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +40,30 @@ require_once "./functions/main.php";
                 }
             }
         } */
+
+        echo "<hr>";
+
+        /*         $figure_1 = new Rectangle(5, 10);
+        echo $figure_1->calcSquare() . "<br>";
+
+        $figure_2 = new Square(5);
+        echo $figure_2->calcSquare() . "<br>";
+
+        echo "<hr>";
+
+        var_dump($figure_1 instanceof Rectangle); //проверяем является ли $figure_1 экземпляром класса Rectangle
+        var_dump($figure_1 instanceof CalcSquare); //проверяем имплиментирует ли $figure_1 интерфейс CalcSquare */
+
+        $figures = [
+            new Rectangle(5, 10),
+            new Square(5),
+        ];
+
+        foreach ($figures as $figure) {
+            if ($figure instanceof CalcSquare) {
+                echo 'Square: ' . $figure->calcSquare() . '<br>';
+            }
+        }
 
         ?>
     </div>

@@ -1,5 +1,5 @@
 <?php
-class Post
+abstract class Post // нельзя создать экземпляр абстрактного класса
 {
     private $title;
     private $content;
@@ -47,7 +47,12 @@ class Post
         // ]);
         return 1;
     }
+
+    abstract public function getInfo(); // абстрактный метод в классе, обязатиельно должен быть реализован в классе наследнике
 }
+
+
+
 
 /* 
 Спецификаторы доступа:
